@@ -1,0 +1,40 @@
+<script>
+    function computerPlay() {
+        let options = ['rock', 'paper', 'scissors'];
+        let randomPosition = Math.floor(Math.random() * 3);
+        return options[randomPosition];
+    }
+
+    function playRound(playerSelection, computerSelection) {
+        playerSelection = playerSelection[0].toUpperCase() + playerSelection.slice(1).toLowerCase();
+        computerSelection = computerSelection[0].toUpperCase() + computerSelection.slice(1).toLowerCase();
+        
+        let duel1 = ['Rock', 'Paper'];
+        let duel2 = ['Rock', 'Scissors'];
+        let duel3 = ['Paper', 'Scissors'];
+
+        let result = false;
+
+        if(playerSelection === computerSelection) {
+            return "It's a tie!"
+        } else if(duel1.includes(playerSelection) && duel1.includes(computerSelection)) {
+            if(playerSelection === 'Paper') {
+                result = true;
+            }
+        } else if (duel2.includes(playerSelection) && duel2.includes(computerSelection)) {
+            if(playerSelection === 'Rock') {
+                result = true;
+            }
+        } else if (duel3.includes(playerSelection) && duel3.includes(computerSelection)) {
+            if(playerSelection === 'Scissors') {
+                result = true;
+            }
+        }
+
+        if(result) {
+            return `You Win! ${playerSelection} beats ${computerSelection}`;
+        } else {
+            return `You Lose! ${computerSelection} beats ${playerSelection}`;
+        }
+    }
+</script>
