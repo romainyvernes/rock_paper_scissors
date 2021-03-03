@@ -1,0 +1,22 @@
+#scoreboard {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#result {
+    align-self: center;
+}
+
+#selections, .score {
+    text-align: center;
+}
+
+.score {
+    font-weight: bold;
+}
+
+#reset {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
