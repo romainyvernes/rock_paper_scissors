@@ -1,22 +1,95 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    background-color: rgb(88, 41, 81);
+    color: white;
+}
+
+button {
+    outline: none;
+}
+
+h1 {
+    margin-top: 35vh;
+}
+
 #scoreboard {
-    display: flex;
+    display: none;
     justify-content: space-evenly;
+    border: 1px solid grey;
+    border-radius: 10px;
+    background-image: linear-gradient(to bottom right, rgb(243, 161, 239), rgb(141, 47, 133), rgb(243, 161, 239));
+}
+
+#player, #computer {
+    border-radius: 10px;
+    background-color: rgba(141, 75, 75, 0.849);
+    width: 100px;
+    margin: 15px 10px;
 }
 
 #result {
     align-self: center;
-}
-
-#selections, .score {
-    text-align: center;
+    border-radius: 10px;
+    background-color: rgba(141, 75, 75, 0.849);
+    width: 270px;
+    height: 40px;
+    padding-top: 20px;
 }
 
 .score {
     font-weight: bold;
+    font-size: 25px;
+}
+
+#selection-container {
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 45px;
+}
+
+#selections button {
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    font-weight: bold;
+    margin: 5px;
+    background-color: rgb(199, 164, 164);
+}
+
+.fa-hand-rock, .fa-hand-paper, .fa-hand-scissors {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.selection {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#player-selection, #computer-selection {
+    width: 150px;
+    height: 100px;
+    border: 1px solid grey;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(141, 75, 75, 0.849);
+    visibility: hidden;
+}
+
+#reset, #start {
+    border-radius: 10px;
+    height: 80px;
+    width: 150px;
+    font-size: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: rgba(141, 75, 75, 0.849);
+    color: white;
 }
 
 #reset {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    display: none;
 }
